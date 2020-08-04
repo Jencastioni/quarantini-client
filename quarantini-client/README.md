@@ -1,4 +1,4 @@
-# Quarantini Client
+# Quarantini Api
 
 # Application Title: A Description
 

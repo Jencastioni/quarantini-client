@@ -3,10 +3,11 @@
 const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const recipe = require('../recipe/events')
 
 const onSignUp = function (event) {
     event.preventDefault()
-  
+    console.log('event worked')
     const form = event.target
     const formData = getFormFields(form)
     api.signUp(formData)

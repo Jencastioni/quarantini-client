@@ -12,10 +12,12 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Quarantini</h1>
+      
+      <!-- <img src="https://blog.luckynuggetcasino.com/wp-content/uploads/2016/07/cocktail-banner.jpg" alt="Cocktail Banner"> -->
     
       <div id="login">
         <div id="unauthenticated">
+          
           <form id="sign-up">
             <input name="credentials[email]" placeholder="email here" type="text">
             <input name="credentials[password]" placeholder="password here" type="password">
@@ -44,6 +46,67 @@
           </form>
         </div>
       </div>
+      <h1>Quarantini</h1>
+    
       <p id="message"></p>
+    
+      <h3 class="subhead">Find the Perfect Quarantine Cocktail</h3>
+      <img src="https://makemeacocktail.com/blog/wp-content/uploads/2019/02/a1.jpg" alt="Cocktail Bar">
+      
+      <div class="recipe-buttons" id="recipeButtons">
+          <!-- <button id="add-recipe" type="submit" class="btn btn-primary">Add Recipe</button> -->
+          <!-- <button id="see-recipes" type="submit" class="btn btn-primary">See My Recipes</button> -->
+          <!-- <button id="-recipe">Add Recipe</button> -->
+        
+          <form id="post">
+            <ul>
+             <li>
+               <label for="name">Cocktail Name:</label>
+               <input type="text" id="name" name="user_name">
+             </li>
+      
+             <li>
+               <label for="text">Ingredients:</label>
+               <textarea id="text" name="user_ingredients"></textarea>
+             </li>
+             <li>
+              <label for="text">Steps:</label>
+              <textarea id="text" name="user_steps"></textarea>
+            </li>
+             <li class="button">
+              <button id="add-recipe" type="submit">Share Your Cocktail!</button>
+            </li>
+            </ul>
+          </form>
+          <form id="index">
+            <button id="see-recipes" type="submit" class="btn btn-primary">See My Recipes</button>
+          </form>
+          
+        
+
+        <!-- <form id="add-recipe">
+          <input name="cocktail[name]" type="text" placeholder="name">
+          <input name="cocktail[recipe]" type="text" placeholder="recipe">
+          <button id="add-recipe-button" type="submit">Share Your Cocktail!</button>
+        </form>
+        <form id="update-recipe">
+          <input name="cocktail[name]" type="text" placeholder="name">
+          <input name="cocktail[recipe]" type="text" placeholder="recipe">
+          <button id="update-recipe-button" type="submit">Update</button>
+        </form> -->
+      </div>
+
+
+      <!-- <div class="card">
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Dec 7, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+      </div> -->
+
+      
+
+      
+
     </body>
 </html>

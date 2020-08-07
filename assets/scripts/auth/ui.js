@@ -2,9 +2,7 @@
 
 const store = require('../store')
 
-// $('#create-game').hide()
-// $('#games-played').hide()
-// $('.board').hide()
+$('.recipe-buttons').hide()
 
 const signUpSuccess = function () {
     $('#message').text('You Created an Account!')
@@ -24,9 +22,7 @@ const signInSuccess = function (response) {
     $('#authenticated').show()
     $('#unauthenticated').hide()
 
-    // $('#create-game').show()
-    // $('#games-played').show()
-    // $('.board').hide()
+    $('.recipe-buttons').show()
 
     $('form').trigger('reset')
   }
@@ -59,10 +55,8 @@ const signInSuccess = function (response) {
 
     $('form').trigger('reset')
   
-    // $('#create-game').hide()
-    // $('#games-played').hide()
-    // $('.board').hide()
-    // change later in index
+    $('.recipe-buttons').hide()
+    
     store.user = null
   }
   

@@ -1,9 +1,6 @@
 #!/bin/bash
 
-API="http://localhost:4741"
-URL_PATH="/change-password"
-
-curl "${API}${URL_PATH}/" \
+curl "http://localhost:4741/change-password" \
   --include \
   --request PATCH \
   --header "Authorization: Bearer ${TOKEN}" \

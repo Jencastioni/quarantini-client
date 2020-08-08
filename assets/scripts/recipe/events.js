@@ -2,6 +2,7 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
+const store = require('../store.js')
 
 const onCreateRecipe = function (event) {
   event.preventDefault()
@@ -12,8 +13,9 @@ const onCreateRecipe = function (event) {
 }
 
 const onIndexRecipe = function (event) {
-  console.log('here is recipe index')
    event.preventDefault()
+   console.log(event)
+   
    const usersRecipe = store.user.token
  
    api.indexRecipe(usersRecipe)
@@ -21,48 +23,36 @@ const onIndexRecipe = function (event) {
      .catch(ui.indexRecipeFailure)
  }
 
+ const onUpdateRecipe = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const formData = getFormFields(form)
 
+  api.updateRecipe(formData)
+    .then(ui.updateRecipeSuccess)
+    // .then(function () {
+    //   onIndexRecipe(event)
+    // })
+    .catch(ui.updateRecipeFailure)
+}
 
-// // const onRecipeCrud = {
-// //   create: function (event) {
-// //     event.preventDefault()
-// //     const formData = getFormFields(event.target)
-// //     api.createRecipe(formData)
-// //       .then(ui.onCreateRecipeSuccess)
-// //       .then(this.index)
-// //       .catch(ui.onRecipeFailure)
-// //   },
-// //   index: function (event) {
-// //     if (event) { event.preventDefault() }
-// //     api.indexRecipe()
-// //       .then(ui.onIndexRecipeSuccess)
-// //       .catch(ui.onRecipeFailure)
-// //   },
-// //   show: function (event) {
-// //     if (event) { event.preventDefault() }
-// //     const formData = getFormFields(event.target)
-// //     api.showRecipe(formData)
-// //       .then(ui.onShowRecipeSuccess)
-// //       .catch(ui.onRecipeFailure)
-// //   },
-// //   update: function (event) {
-// //     event.preventDefault()
-// //     const recipeId = $(event.target).data('recipe-id')
-// //     const formData = getFormFields(event.target)
-// //     api.updateRecipe(formData, recipeId)
-// //       .then(data => ui.onUpdateRecipeSuccess(data, recipeId, formData))
-// //       .catch(ui.onRecipeFailure)
-// //   },
-// //   delete: function (event) {
-// //     event.preventDefault()
-// //     const id = $(event.target).data('recipe-id')
-// //     api.deleteRecipe(id)
-// //       .then(() => ui.onDeleteRecipeSuccess(id))
-// //       .catch(ui.onRecipeFailure)
-// //   }
-// // }
+const onDeleteRecipe = function (event) {
+  event.preventDefault()
+  console.log('this is the event', event)
+  // const deletedWhiskey = store.user.token
+  const recipeId = $(event.target).closest('section').data('id')
+  console.log('recipe id=', recipeId)
+
+  api.deleteRecipe(recipeId)
+    .then(ui.onDeleteRecipeSuccess)
+    .catch(ui.onDeleteRecipeFailure)
+    
+}
+
 
 module.exports = {
     onIndexRecipe,
-    onCreateRecipe
+    onCreateRecipe,
+    onUpdateRecipe,
+    onDeleteRecipe
 }

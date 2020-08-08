@@ -27,33 +27,48 @@ img {
 
   h1 {
     margin: 10px, 0, 10px, 10px;
+    margin-bottom: 0;
     padding: 20px;
     justify-content: center;
     text-align: center;
     font-family: 'Bubblegum Sans', cursive;
     color: white;
     font-size: 15vw;
-    text-shadow: 7px 7px rgb(68, 68, 85);
+    color: #FFFFFF;
+    text-shadow: 0 0 5px rgb(9, 9, 9), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #1856ff, 0 0 40px #1856ff, 0 0 55px #1856ff, 0 0 75px #1856ff, 2px -3px 0px rgba(206,89,55,0.16);
+  color: #FFFFFF;
+
+
+  
   }
 
   p {
     text-align: center;
     font-family: 'Nunito', sans-serif;
+    font-size: 4vw;
+    color: white;
+    text-shadow: 2px 2px rgb(19, 22, 84);
+    margin: 1em;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: 'Bubblegum Sans', cursive;
     font-size: 7vw;
     color: white;
-    text-shadow: 5px 5px rgb(19, 22, 84);
-    margin: 0, .5em, .5em, .5em;
+    text-shadow: 0 0 5px rgb(6, 6, 6), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #1856ff, 0 0 40px #1856ff, 0 0 55px #1856ff, 0 0 75px #1856ff, 2px -3px 0px rgba(206,89,55,0.16);
+    margin: .5em;
+    margin-top: 0;
   }
 
   h3 {
     text-align: center;
-    font-family: 'Nunito', sans-serif;
-    font-size: 5vw;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 7vw;
     color: white;
-    text-shadow: 5px 5px rgb(19, 22, 84);
+    text-shadow: 0 0 5px rgb(6, 6, 6), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #1856ff, 0 0 40px #1856ff, 0 0 55px #1856ff, 0 0 75px #1856ff, 2px -3px 0px rgba(206,89,55,0.16);
     margin: .5em;
   }
-
   
   #login {
     border: 3px solid white;
@@ -179,12 +194,28 @@ img {
     }
   }
   
-  #update-recipe button {
+  // #update-recipe button {
+  //   padding: .5em 2em;
+  //   color: white;
+  //   background-color:rgb(19, 22, 84);
+  //   cursor: pointer;
+  //   font-family: 'Bubblegum Sans', cursive;
+  //   border: 2px solid white;
+  //   &:hover {
+  //     color: black;
+  //     border-color:rgb(19, 22, 84);
+  //     background-color: rgb(121, 121, 150);
+  //     background: rgb(121, 121, 150)
+  //   }
+  // }
+  #index button {
     padding: .5em 2em;
+    margin: 1em;
     color: white;
     background-color:rgb(19, 22, 84);
     cursor: pointer;
     font-family: 'Bubblegum Sans', cursive;
+    font-size: 2vw;
     border: 2px solid white;
     &:hover {
       color: black;
@@ -193,86 +224,169 @@ img {
       background: rgb(121, 121, 150)
     }
   }
-  
+
+  section {
+  margin: 0 auto;
+  width: 60%;
+  width: 60%;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  color: white;
+  text-shadow: rgb(121, 121, 150);
+  font-family: 'Nunito', sans-serif;
+  font-size: 3vw;
+  background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);
+  }
 
   #authenticated {
     display: none;
   }
 
-  // form {
-  //   /* Center the form on the page */
-  //   margin: 0 auto;
-  //   width: 400px;
-  //   /* Form outline */
-  //   padding: 1em;
-  //   border: 1px solid #CCC;
-  //   border-radius: 1em;
-  // }
+
+  #create-cocktail {
+    /* Center the form on the page */
+    margin: 0 auto;
+    width: 60%;
+    /* Form outline */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);
+  }
   
-  // ul {
-  //   list-style: none;
-  //   padding: 0;
-  //   margin: 0;
-  // }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
   
-  // form li + li {
-  //   margin-top: 1em;
-  // }
+  form li + li {
+    margin-top: 1em;
+  }
   
-  // label {
-  //   /* Uniform size & alignment */
-  //   display: inline-block;
-  //   width: 90px;
-  //   text-align: right;
-  // }
+  label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+  }
   
-  // input, 
-  // textarea {
-  //   /* To make sure that all text fields have the same font settings
-  //      By default, textareas have a monospace font */
-  //   font: 1em sans-serif;
+  input, 
+  textarea {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em sans-serif;
   
-  //   /* Uniform text field size */
-  //   width: 300px;
-  //   box-sizing: border-box;
+    /* Uniform text field size */
+    max-width: 400px;
+    box-sizing: border-box;
+    
   
-  //   /* Match form field borders */
-  //   border: 1px solid #999;
-  // }
+    /* Match form field borders */
+    border: 1px solid #999;
+  }
   
-  // input:focus, 
-  // textarea:focus {
-  //   /* Additional highlight for focused elements */
-  //   border-color: #000;
-  // }
-  
-  // textarea {
-  //   /* Align multiline text fields with their labels */
-  //   vertical-align: top;
-  
-  //   /* Provide space to type some text */
-  //   height: 5em;
-  // }
+  input:focus, 
+  textarea:focus {
+    /* Additional highlight for focused elements */
+    border-color: #000;
+  }
+  #textbox {
+    background-color:#FFF;
+    min-height:300px;
+    max-width: 300px;
+
+  }
+  textarea {
+    /* Align multiline text fields with their labels */
+    vertical-align: top;
+    resize: vertical;
+    /* Provide space to type some text */
+    height: 5em;
+  }
   
   // .button {
   //   /* Align buttons with the text fields */
   //   padding-left: 90px; /* same size as the label elements */
   // }
   
-  // button {
-  //   /* This extra margin represent roughly the same space as the space
-  //      between the labels and their text fields */
-  //      padding: .5em 2em;
-  //      color: white;
-  //      background-color:rgb(19, 22, 84);
-  //      cursor: pointer;
-  //      font-family: 'Bubblegum Sans', cursive;
-  //      border: 2px solid white;
-  //      &:hover {
-  //        color: black;
-  //        border-color:rgb(19, 22, 84);
-  //        background-color: rgb(121, 121, 150);
-  //        background: rgb(121, 121, 150)
-  //      }
-  //    }
-  
+  button {
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+       padding: .5em .5em;
+       color: white;
+       background-color:rgb(19, 22, 84);
+       cursor: pointer;
+       font-family: 'Bubblegum Sans', cursive;
+       border: 2px solid white;
+       &:hover {
+         color: black;
+         border-color:rgb(19, 22, 84);
+         background-color: rgb(121, 121, 150);
+         background: rgb(121, 121, 150)
+       }
+     }
+
+     #gif {
+       max-width: 20%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        margin-top: 0;
+        border-radius: 8px;
+      
+    }
+
+    // #recipetextbox {
+    //   padding: 10px;
+    //   background-color: #f4f4f4;
+    //   width: 40%;     
+    // }
+    // #recipetextbox input {
+    //   min-height:50px;
+    //   max-height:120px;
+    //   width: 290px;
+    // }
+    // #recipetextbox input.vertical { 
+    //   resize: vertical;
+    // }
+// .modal {
+//   display: none; /* Hidden by default */
+//   position: fixed; /* Stay in place */
+//   z-index: 1; /* Sit on top */
+//   left: 0;
+//   top: 0;
+//   width: 100%; /* Full width */
+//   height: 100%; /* Full height */
+//   overflow: auto; /* Enable scroll if needed */
+//   background-color: rgb(0,0,0); /* Fallback color */
+//   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+// }
+
+// /* Modal Content/Box */
+// .modal-content {
+//   background-color: #fefefe;
+//   margin: 15% auto; /* 15% from the top and centered */
+//   padding: 20px;
+//   border: 1px solid #888;
+//   width: 80%; /* Could be more or less, depending on screen size */
+// }
+
+// /* The Close Button */
+// .close {
+//   color: #aaa;
+//   float: right;
+//   font-size: 28px;
+//   font-weight: bold;
+// }
+
+// .close:hover,
+// .close:focus {
+//   color: black;
+//   text-decoration: none;
+//   cursor: pointer;
+// }

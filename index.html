@@ -14,7 +14,6 @@
     <body>
       
       <!-- <img src="https://blog.luckynuggetcasino.com/wp-content/uploads/2016/07/cocktail-banner.jpg" alt="Cocktail Banner"> -->
-    
       <div id="login">
         <div id="unauthenticated">
           
@@ -24,7 +23,7 @@
             <input name="credentials[password_confirmation]" placeholder="confirm password here" type="password">
             <button type="submit" class="btn btn-primary">Sign Up!</button>
           </form>
-
+            
           <form id="sign-in">
             <input name="credentials[email]" placeholder="email here" type="email">
             <input name="credentials[password]" placeholder="password here" type="password">
@@ -46,67 +45,118 @@
           </form>
         </div>
       </div>
+      <div class="big-heading" id="heading"></div>
       <h1>Quarantini</h1>
+       <img src=https://i.pinimg.com/originals/f1/f9/92/f1f9921de4613d1b357dd11d4047fe1d.gif id="gif" alt="Cocktail Gif">
+      <h2 class="subhead">"Stay home and drink alone"</h2>
+        
+        
+        
+        <img src="https://makemeacocktail.com/blog/wp-content/uploads/2019/02/a1.jpg" alt="Cocktail Bar">
+        <p id="message"></p>
+        <h3>Post Your Perfect Quarantine Cocktail</h3>
+        
+
+      </div>
     
-      <p id="message"></p>
-    
-      <h3 class="subhead">Find the Perfect Quarantine Cocktail</h3>
-      <img src="https://makemeacocktail.com/blog/wp-content/uploads/2019/02/a1.jpg" alt="Cocktail Bar">
-      
-      <div class="recipe-buttons" id="recipeButtons">
+      <div class="recipe-buttons">
           <!-- <button id="add-recipe" type="submit" class="btn btn-primary">Add Recipe</button> -->
           <!-- <button id="see-recipes" type="submit" class="btn btn-primary">See My Recipes</button> -->
           <!-- <button id="-recipe">Add Recipe</button> -->
         
-          <form id="post">
+          <form id="create-cocktail" class="authenticated">
             <ul>
              <li>
-               <label for="name">Cocktail Name:</label>
-               <input type="text" id="name" name="user_name">
+               <label for="name">Cocktail:</label>
+               <input type="text" name="title">
              </li>
-      
+             
+             <div id="recipetextbox">
              <li>
-               <label for="text">Ingredients:</label>
-               <textarea id="text" name="user_ingredients"></textarea>
+               <label for="text">Recipe:</label>
+               <input type="text" id="textbox" name="text" class="vertical"></input>
              </li>
-             <li>
+            </div>
+             <!-- <li>
               <label for="text">Steps:</label>
-              <textarea id="text" name="user_steps"></textarea>
-            </li>
+              <input type="text" name="text"></input>
+            </li> -->
              <li class="button">
-              <button id="add-recipe" type="submit">Share Your Cocktail!</button>
+              <button id="add-recipe" type="submit">Save Your Cocktail</button>
             </li>
             </ul>
           </form>
-          <form id="index">
+
+          <form id="index" class="authenticated">
             <button id="see-recipes" type="submit" class="btn btn-primary">See My Recipes</button>
           </form>
-          
-        
 
-        <!-- <form id="add-recipe">
-          <input name="cocktail[name]" type="text" placeholder="name">
-          <input name="cocktail[recipe]" type="text" placeholder="recipe">
-          <button id="add-recipe-button" type="submit">Share Your Cocktail!</button>
-        </form>
-        <form id="update-recipe">
-          <input name="cocktail[name]" type="text" placeholder="name">
-          <input name="cocktail[recipe]" type="text" placeholder="recipe">
-          <button id="update-recipe-button" type="submit">Update</button>
-        </form> -->
+          <div class="all-recipes"></div>
+          <!-- <div class="index">
+            <button id="see-recipes" class="btn btn-primary">See My Recipes</button>
+            <button id="delete-recipe" type="button" class="btn btn-primary">Delete My Recipes</button>
+          </div> -->
+          <!-- <form id="delete" class="authenticated">
+            <button id="delete-recipe" type="button" class="btn btn-primary">Delete My Recipes</button>
+          </form> -->
+          <!-- <main>
+            <div id="content" class="content"></div>
+          </main>
+         -->
+
+ 
       </div>
-
-
-      <!-- <div class="card">
-        <h2>TITLE HEADING</h2>
-        <h5>Title description, Dec 7, 2017</h5>
-        <div class="fakeimg" style="height:200px;">Image</div>
-        <p>Some text..</p>
+      <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Updating an existing recipe?</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="update-recipes">
+                <input name="title" type="text" placeholder="ingredient">
+                <input name="text" type="number" placeholder="temperature in &deg F">
+                <button type="submit" data-id="{{recipe._id}}" class="btn btn-info update-recipe">Save changes</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div> -->
+    <!-- Trigger/Open The Modal -->
 
-      
 
-      
+  <!-- UPDATE BLOG MODAL -->
+  <!-- <div id="update-recipe-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Update Your Recipe</h5>
+          <button type="button" class="close cancel" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+        <!-- UPDATE BLOG FORM -->
+        <!-- <form id="update-recipe" class="blog-crud-form d-flex flex-column" data-action="create">
+          <div class="modal-body col-12">
+            <p class="my-1">Cocktail Name</p>
+            <input class="col-12 my-2" name="recipe[title]" type="text" placeholder="Update your recipe title here" maxlength="32" required>
+            <p class="my-1">Ingredients</p>
+            <textarea id="blog-body-textarea" class="col-12 my-2" name="recipe[text]" placeholder="Ingredients" maxlength="10000" required></textarea>
+          </div> -->
+
+          <!-- <div class="modal-footer">
+            <button class="btn btn-success" type="submit">Update your Recipe</button>
+            <button class="btn btn-secondary cancel" type="button" data-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div> -->
+
 
     </body>
 </html>
+

@@ -4,14 +4,15 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const createRecipe = (formData) => {
-  // const recipe = formData.recipe
+  const recipe = formData
+  console.log(recipe)
   return $.ajax({
      headers: {
        Authorization: 'Bearer ' + store.user.token
      },
     url: config.apiUrl + '/recipe',
     method: 'POST',
-    data: {formData} //recipe
+    data: {recipe} 
   })
 }
 
@@ -30,59 +31,53 @@ const indexRecipe = function () {
  }
 
 
+const showRecipe = (formData) => {
+  const thisRecipeId = formData
+  return $.ajax({
+  headers: {
+    Authorization: 'Bearer ' + store.user.token
+  },
+    url: config.apiUrl + '/recipe/' + thisRecipeId,
+    method: 'GET',
+    data: formData
+  })
+}
 
+const updateRecipe = (formData) => {
+  const newRecipeId = formData.recipe.id
+  return $.ajax({
+    url: config.apiUrl + `/recipe/${recipeId}`,
+    method: 'PATCH',
+    headers: { 
+      Authorization: 'Bearer ' + store.user.token 
+    },
+    // user: store.user,
+    data: formData
+    // data: {
+    //     recipe: {
+    //         title: formData.recipe.title,
+    //         text: formData.recipe.text
+    //   }}
+  })
+}
 
-// // const indexRecipe = () => {
-// //   return $.ajax({
-// //     url: config.apiUrl + '/recipe',
-// //     method: 'GET'
-// //   })
-// // }
-
-// // const indexMyRecipe = () => {
-// //   return $.ajax({
-// //     url: config.apiUrl + '/my-recipe',
-// //     method: 'GET',
-// //     headers: { Authorization: 'Bearer ' + store.user.token }
-// //   })
-// // }
-
-// // const showRecipe = (formData) => {
-// //   const id = formData.recipe.id
-// //   return $.ajax({
-// //     url: config.apiUrl + `/recipe/${id}`,
-// //     method: 'GET'
-// //   })
-// // }
-
-// // const updateRecipe = (formData, id) => {
-// //   return $.ajax({
-// //     url: config.apiUrl + `/recipe/${id}`,
-// //     method: 'PATCH',
-// //     headers: { Authorization: 'Bearer ' + store.user.token },
-// //     data: {
-// //         recipe: {
-// //             title: formData.recipe.title,
-// //             body: formData.recipe.body
-// //       }}
-// //   })
-// // }
-
-// // const deleteRecipe = id => {
-// //   return $.ajax({
-// //     url: config.apiUrl + `/recipe/${id}`,
-// //     method: 'DELETE',
-// //     headers: { Authorization: 'Bearer ' + store.user.token }
-// //   })
-// // }
+const deleteRecipe = recipeId => {
+  return $.ajax({
+    url: config.apiUrl + '/recipe/' + recipeId,
+    method: 'DELETE',
+    headers: { 
+      Authorization: 'Bearer ' + store.user.token 
+    }
+  })
+}
 
 
 
 module.exports = {
   createRecipe,
   indexRecipe,
-//   // showRecipe,
-//   // updateRecipe,
-//   // deleteRecipe,
+  showRecipe,
+  updateRecipe,
+  deleteRecipe,
 //   // indexMyRecipe
 }

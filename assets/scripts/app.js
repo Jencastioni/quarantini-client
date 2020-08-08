@@ -15,10 +15,13 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
 
-  $('#add-recipe').on('submit', recipeEvents.onCreateRecipe)
-  $('#see-recipes').on('submit', recipeEvents.onindexRecipe)
-  $('#update-recipe').on('submit', recipeEvents.onUpdateRecipe)
+  
+  $('#create-cocktail').on('submit', recipeEvents.onCreateRecipe)
+  $('#index').on('submit', recipeEvents.onIndexRecipe)
+  console.log('#see-recipes')
+  // $('#update-recipe').on('submit', recipeEvents.onUpdateRecipe)
 
   //Handlebars
-  // $('.content').on('click', '.delete-recipe', recipeEvents.onDeleteRecipe)
+  $('.all-recipes').on('click', '.delete-recipe', recipeEvents.onDeleteRecipe)
+  $('.all-recipes').on('click', '.update-recipe', recipeEvents.onUpdateRecipe)
 })

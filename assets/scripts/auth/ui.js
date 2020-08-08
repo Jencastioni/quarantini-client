@@ -3,10 +3,11 @@
 const store = require('../store')
 
 $('.recipe-buttons').hide()
+$('.big-heading').hide()
 
 const signUpSuccess = function () {
     $('#message').text('You Created an Account!')
-
+   
     $('form').trigger('reset')
 }
 
@@ -23,7 +24,7 @@ const signInSuccess = function (response) {
     $('#unauthenticated').hide()
 
     $('.recipe-buttons').show()
-
+    $('.big-heading').show()
     $('form').trigger('reset')
   }
   
@@ -56,6 +57,7 @@ const signInSuccess = function (response) {
     $('form').trigger('reset')
   
     $('.recipe-buttons').hide()
+    $('.big-heading').hide()
     
     store.user = null
   }

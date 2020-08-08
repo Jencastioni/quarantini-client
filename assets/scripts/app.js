@@ -18,10 +18,10 @@ $(() => {
   
   $('#create-cocktail').on('submit', recipeEvents.onCreateRecipe)
   $('#index').on('submit', recipeEvents.onIndexRecipe)
-  console.log('#see-recipes')
-  // $('#update-recipe').on('submit', recipeEvents.onUpdateRecipe)
+
+  $('#update-recipe').on('submit', recipeEvents.onUpdateRecipe)
 
   //Handlebars
   $('.all-recipes').on('click', '.delete-recipe', recipeEvents.onDeleteRecipe)
-  $('.all-recipes').on('click', '.update-recipe', recipeEvents.onUpdateRecipe)
+  // $('.all-recipes').on('submit', '.update-recipe', recipeEvents.onUpdateRecipe)
 })

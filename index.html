@@ -53,9 +53,9 @@
         
         
         <img src="https://makemeacocktail.com/blog/wp-content/uploads/2019/02/a1.jpg" alt="Cocktail Bar">
-        <p id="message"></p>
+       
         <h3>Post Your Perfect Quarantine Cocktail</h3>
-        
+        <p id="message"></p>
 
       </div>
     
@@ -68,7 +68,7 @@
             <ul>
              <li>
                <label for="name">Cocktail:</label>
-               <input type="text" name="title">
+               <input type="text" id="cocktail-name" name="title">
              </li>
              
              <div id="recipetextbox">
@@ -92,6 +92,13 @@
           </form>
 
           <div class="all-recipes"></div>
+
+          <form id="update-recipe" class="authenticated">
+            <input name="recipe[id]" type="text" placeholder="ID">
+            <input name="recipe[title]" type="text" placeholder="Cocktail">
+            <input name="recipe[text]" type="text" placeholder="Recipe">
+            <button type="submit">Update</button>
+          </form>
           <!-- <div class="index">
             <button id="see-recipes" class="btn btn-primary">See My Recipes</button>
             <button id="delete-recipe" type="button" class="btn btn-primary">Delete My Recipes</button>
@@ -105,21 +112,21 @@
          -->
 
  
-      </div>
-      <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- </div> 
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Updating an existing recipe?</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Update recipe</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
               <form id="update-recipes">
-                <input name="title" type="text" placeholder="ingredient">
-                <input name="text" type="number" placeholder="temperature in &deg F">
-                <button type="submit" data-id="{{recipe._id}}" class="btn btn-info update-recipe">Save changes</button>
+                <input name="title" type="text" placeholder="Cocktail">
+                <input name="text" type="number" placeholder="Recipe">
+                <button type="submit" data-id="{{recipe._id}}" class="btn btn-info update-recipe">Update</button>
               </form>
             </div>
           </div>

@@ -47,7 +47,7 @@ img {
     font-family: 'Nunito', sans-serif;
     font-size: 4vw;
     color: white;
-    text-shadow: 2px 2px rgb(19, 22, 84);
+    text-shadow: 3px 2px rgb(19, 22, 84);
     margin: 1em;
   }
 
@@ -65,6 +65,15 @@ img {
     text-align: center;
     font-family: 'Bubblegum Sans', cursive;
     font-size: 7vw;
+    color: white;
+    text-shadow: 0 0 5px rgb(6, 6, 6), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #1856ff, 0 0 40px #1856ff, 0 0 55px #1856ff, 0 0 75px #1856ff, 2px -3px 0px rgba(206,89,55,0.16);
+    margin: .5em;
+  }
+
+  h6 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
     color: white;
     text-shadow: 0 0 5px rgb(6, 6, 6), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #1856ff, 0 0 40px #1856ff, 0 0 55px #1856ff, 0 0 75px #1856ff, 2px -3px 0px rgba(206,89,55,0.16);
     margin: .5em;
@@ -194,20 +203,24 @@ img {
     }
   }
   
-  // #update-recipe button {
-  //   padding: .5em 2em;
-  //   color: white;
-  //   background-color:rgb(19, 22, 84);
-  //   cursor: pointer;
-  //   font-family: 'Bubblegum Sans', cursive;
-  //   border: 2px solid white;
-  //   &:hover {
-  //     color: black;
-  //     border-color:rgb(19, 22, 84);
-  //     background-color: rgb(121, 121, 150);
-  //     background: rgb(121, 121, 150)
-  //   }
-  // }
+  #update-recipe button {
+    padding: .5em 2em;
+    color: white;
+    background-color:rgb(19, 22, 84);
+    cursor: pointer;
+    font-family: 'Bubblegum Sans', cursive;
+    border: 2px solid white;
+    &:hover {
+      color: black;
+      border-color:rgb(19, 22, 84);
+      background-color: rgb(121, 121, 150);
+      background: rgb(121, 121, 150)
+    }
+  }
+
+  .update-recipe {
+    display: block;
+  }
   #index button {
     padding: .5em 2em;
     margin: 1em;
@@ -249,7 +262,7 @@ img {
     margin: 0 auto;
     width: 60%;
     /* Form outline */
-    padding: 1em;
+    padding: 10px;
     border: 1px solid #CCC;
     border-radius: 1em;
     font-family: Arial, Helvetica, sans-serif;
@@ -264,14 +277,17 @@ img {
   }
   
   form li + li {
-    margin-top: 1em;
+    margin-top: .5em;
+    padding: 0;
   }
   
   label {
     /* Uniform size & alignment */
-    display: inline-block;
-    width: 100px;
-    text-align: left;
+    display: block;
+    min-width: 10px;
+    font-size: 3vw;
+    margin-left: 40%;
+    margin-right: 40%;
   }
   
   input, 
@@ -283,6 +299,7 @@ img {
     /* Uniform text field size */
     max-width: 400px;
     box-sizing: border-box;
+    margin-bottom: 1em;
     
   
     /* Match form field borders */
@@ -294,10 +311,12 @@ img {
     /* Additional highlight for focused elements */
     border-color: #000;
   }
+  
   #textbox {
     background-color:#FFF;
     min-height:300px;
-    max-width: 300px;
+    width: 90%;
+    padding-bottom: 250px;
 
   }
   textarea {
@@ -343,9 +362,18 @@ img {
 
     // #recipetextbox {
     //   padding: 10px;
-    //   background-color: #f4f4f4;
-    //   width: 40%;     
+    //   // background-color: #f4f4f4;
+    //   width: 50%;     
+    //   margin: auto;
+
     // }
+
+    #cocktail-name {
+      padding: 10px;
+      // background-color: #f4f4f4;
+      width: 90%;     
+      margin: auto;
+    }
     // #recipetextbox input {
     //   min-height:50px;
     //   max-height:120px;

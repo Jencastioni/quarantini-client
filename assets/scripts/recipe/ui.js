@@ -16,7 +16,6 @@ const createRecipeFailure = function () {
 
 
 const indexRecipeSuccess = function (response) {
-  console.log('ui recipe index works')
   store.recipe = response.recipe
   const showRecipeHTML = showRecipeTemplate({recipes: response.recipes})
   $('.all-recipes').empty()
@@ -44,17 +43,20 @@ const indexRecipeFailure = function () {
 // }
 
 const onUpdateRecipeSuccess = () => {
-  $('#message').text('Your recipe was updated!')
-  $('input').trigger('reset')
+  // $('.all-recipes').hide() 
+  // $('input').trigger('reset')
+  $('#message').text("Cocktail Updated!")
   $('form').trigger('reset')
-  $('.all-recipes').hide() //index
+  $('.all-recipes').hide()
   $('.all-recipes').empty()
 }
 
 const onUpdateRecipeFailure = () => {
   console.log("Updated ui fail")
-  $('#message').text('Your recipe was not updated ;(')
+  $('#message').text('Your cocktail was not updated ;(')
 }
+
+
 const onDeleteRecipeSuccess = () => {
   $('#message').text('Your recipe was deleted!')
   $('#index').show()

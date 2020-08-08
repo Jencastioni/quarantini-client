@@ -29,11 +29,11 @@ const onIndexRecipe = function (event) {
   const formData = getFormFields(form)
 
   api.updateRecipe(formData)
-    .then(ui.updateRecipeSuccess)
+    .then(ui.onUpdateRecipeSuccess)
     // .then(function () {
     //   onIndexRecipe(event)
     // })
-    .catch(ui.updateRecipeFailure)
+    .catch(ui.onUpdateRecipeFailure)
 }
 
 const onDeleteRecipe = function (event) {

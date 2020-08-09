@@ -3,7 +3,7 @@
 body {
     margin: 0; 
     background: rgb(19,17,65);
-    // background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(157, 157, 171) 35%, rgb(19,17,65) 100%);
+    background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(157, 157, 171) 35%, rgb(19,17,65) 100%);
  background-color:#556;
  background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
 linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, rgb(152, 152, 162) 87.5%, rgb(181, 181, 189)),
@@ -14,8 +14,20 @@ linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #
 background-size:80px 140px;
 background-position: 0 0, 0 0, 40px 70px, 40px 70px;
     font-family: "Arial", sans-serif;
+// background-repeat: no-repeat;
+//  background-attachment: fixed;
+//  background-size: cover;
+//  background-position: top;
+//  background-image:url(https://data.whicdn.com/images/309144818/original.gif);
+//  width: 100%;
+//  height: 100%;
+//  font-family: Arial, Helvetica;
+//  letter-spacing: 0.02em;
+//   font-weight: 400;
+//  -webkit-font-smoothing: antialiased; 
   }
-  
+  // nightlife: https://images.unsplash.com/photo-1519214605650-76a613ee3245?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80)
+  // https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80
 img {
     display: block;
     margin-left: auto;
@@ -37,9 +49,6 @@ img {
     color: #FFFFFF;
     text-shadow: 0 0 5px rgb(9, 9, 9), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #1856ff, 0 0 40px #1856ff, 0 0 55px #1856ff, 0 0 75px #1856ff, 2px -3px 0px rgba(206,89,55,0.16);
   color: #FFFFFF;
-
-
-  
   }
 
   p {
@@ -50,7 +59,24 @@ img {
     text-shadow: 3px 2px rgb(19, 22, 84);
     margin: 1em;
   }
-
+#age {
+  font-size: 7vw;
+  text-shadow: 0 0 5px rgb(9, 9, 9), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #1856ff, 0 0 40px #1856ff, 0 0 55px #1856ff, 0 0 75px #1856ff, 2px -3px 0px rgba(206,89,55,0.16);
+  color: #FFFFFF;
+}
+#about {
+  text-align: center;
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 3vw;
+  color: white;
+  text-shadow: 0 0 5px rgb(6, 6, 6), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #1856ff, 0 0 40px #1856ff, 0 0 55px #1856ff, 0 0 75px #1856ff, 2px -3px 0px rgba(206,89,55,0.16);
+  margin: .5em;
+  margin-top: 0;
+}
+// #welcome {
+//   margin: 25px;
+//   padding: 50px;
+// }
   h2 {
     text-align: center;
     font-family: 'Bubblegum Sans', cursive;
@@ -78,92 +104,7 @@ img {
     text-shadow: 0 0 5px rgb(6, 6, 6), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #1856ff, 0 0 40px #1856ff, 0 0 55px #1856ff, 0 0 75px #1856ff, 2px -3px 0px rgba(206,89,55,0.16);
     margin: .5em;
   }
-  
-  #login {
-    border: 3px solid white;
-    display: block;
-    background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);
-  }
-  
-  #sign-in {
-    font-size: 1.5em;
-    padding: .5em .25em;
-    color: rgb(19, 22, 84);;
-    cursor: pointer;
-    font-family: 'Bubblegum Sans', cursive;
-  }
-  
-  #sign-in button {
-    color: white;
-    background-color: rgb(19, 22, 84);
-    border: 2px solid white;
-    &:hover {
-      color: black;
-      border-color: rgb(19, 22, 84);
-      background-color: rgb(121, 121, 150);
-      background: rgb(121, 121, 150)
-    }
-  }
-  
-  #sign-up {
-    font-size: 1.5em;
-    padding: .5em .25em;
-    color: rgb(19, 22, 84);;
-    cursor: pointer;
-    font-family: 'Bubblegum Sans', cursive;
-  }
-  
-  #sign-up button {
-    color: white;
-    background-color: rgb(19, 22, 84);
-    border: 2px solid white;
-    &:hover {
-      color: black;
-      border-color: rgb(19, 22, 84);
-      background-color: rgb(121, 121, 150);
-      background: rgb(121, 121, 150)
-    }
-  }
-  
-  #sign-out {
-    font-size: 1.5em;
-    padding: .5em .25em;
-    color: rgb(19, 22, 84);
-    cursor: pointer;
-    font-family: 'Bubblegum Sans', cursive;
-  }
-  
-  #sign-out button {
-    color: white;
-    background-color: rgb(19, 22, 84);
-    border: 2px solid white;
-    &:hover {
-      color: black;
-      border-color: rgb(19, 22, 84);
-      background-color: rgb(121, 121, 150);
-      background: rgb(121, 121, 150)
-    }
-  }
-  
-  #change-password {
-    font-size: 1.5em;
-    padding: .5em .25em;
-    color: rgb(19, 22, 84);
-    cursor: pointer;
-    font-family: 'Bubblegum Sans', cursive;
-  }
-  
-  #change-password button {
-    color: white;
-    background-color: rgb(19, 22, 84);
-    border: 2px solid white;
-    &:hover {
-      color: black;
-      border-color:rgb(19, 22, 84);
-      background-color: rgb(121, 121, 150);
-      background: rgb(121, 121, 150)
-    }
-  }
+ 
 
   .recipe-buttons {
     justify-content: center;
@@ -174,7 +115,8 @@ img {
   }
   
   #add-recipe button {
-    padding: .5em 2em;
+    padding: .5em 1em;
+    font-size: 2vw;
     color: white;
     background-color: rgb(19, 22, 84);
     cursor: pointer;
@@ -188,10 +130,11 @@ img {
     }
   }
   
-  #see-recipes button {
-    padding: .5em 2em;
+  #update-button {
+    padding: .5em 1em;
+    font-size: 2vw;
     color: white;
-    background-color: rgb(19, 22, 84);
+    background-color:rgb(19, 22, 84);
     cursor: pointer;
     font-family: 'Bubblegum Sans', cursive;
     border: 2px solid white;
@@ -202,8 +145,52 @@ img {
       background: rgb(121, 121, 150)
     }
   }
+
+  // UPDATE MODAL
+  #update-textbox   {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em sans-serif;
   
-  #update-recipe button {
+    /* Uniform text field size */
+    max-width: 90%;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+  
+    /* Match form field borders */
+    border: 1px solid #999;
+    background-color:#FFF;
+    min-height:300px;
+    width: 90%;
+    padding-bottom: 250px; 
+  }
+  #update-modal-cocktail{
+    padding: 0,40%;
+    font: 1em sans-serif;
+  
+    /* Uniform text field size */
+    // max-width: 90%;
+    // box-sizing: border-box;
+    // margin-bottom: 1em;
+  }
+
+  #update-modal-id{
+    padding: 0,40%;
+    // display: block;
+    font: 1em sans-serif;
+  
+    // /* Uniform text field size */
+    // // max-width: 90%;
+    // box-sizing: border-box;
+    // margin-bottom: 1em;
+  }
+
+  .update-recipe {
+    display: block;
+    padding: 0;
+  }
+
+  #create-button{
     padding: .5em 2em;
     color: white;
     background-color:rgb(19, 22, 84);
@@ -218,17 +205,14 @@ img {
     }
   }
 
-  .update-recipe {
-    display: block;
-  }
   #index button {
     padding: .5em 2em;
+    font-size: 3vw;
     margin: 1em;
     color: white;
     background-color:rgb(19, 22, 84);
     cursor: pointer;
     font-family: 'Bubblegum Sans', cursive;
-    font-size: 2vw;
     border: 2px solid white;
     &:hover {
       color: black;
@@ -237,7 +221,22 @@ img {
       background: rgb(121, 121, 150)
     }
   }
-
+  #see-recipes button {
+    padding: .5em 1em;
+    font-size: 3vw;
+    color: white;
+    background-color: rgb(19, 22, 84);
+    cursor: pointer;
+    font-family: 'Bubblegum Sans', cursive;
+    border: 2px solid white;
+    &:hover {
+      color: black;
+      border-color:rgb(19, 22, 84);
+      background-color: rgb(121, 121, 150);
+      background: rgb(121, 121, 150)
+    }
+  }
+  
   section {
   margin: 0 auto;
   width: 60%;
@@ -262,7 +261,7 @@ img {
     margin: 0 auto;
     width: 60%;
     /* Form outline */
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #CCC;
     border-radius: 1em;
     font-family: Arial, Helvetica, sans-serif;
@@ -290,8 +289,7 @@ img {
     margin-right: 40%;
   }
   
-  input, 
-  textarea {
+#create-textbox   {
     /* To make sure that all text fields have the same font settings
        By default, textareas have a monospace font */
     font: 1em sans-serif;
@@ -305,7 +303,7 @@ img {
     /* Match form field borders */
     border: 1px solid #999;
   }
-  
+
   input:focus, 
   textarea:focus {
     /* Additional highlight for focused elements */
@@ -319,13 +317,13 @@ img {
     padding-bottom: 250px;
 
   }
-  textarea {
-    /* Align multiline text fields with their labels */
-    vertical-align: top;
-    resize: vertical;
-    /* Provide space to type some text */
-    height: 5em;
-  }
+  // textarea {
+  //   /* Align multiline text fields with their labels */
+  //   vertical-align: top;
+  //   resize: vertical;
+  //   /* Provide space to type some text */
+  //   height: 5em;
+  // }
   
   // .button {
   //   /* Align buttons with the text fields */
@@ -336,6 +334,7 @@ img {
     /* This extra margin represent roughly the same space as the space
        between the labels and their text fields */
        padding: .5em .5em;
+       font-size: 3vw;
        color: white;
        background-color:rgb(19, 22, 84);
        cursor: pointer;
@@ -350,7 +349,7 @@ img {
      }
 
      #gif {
-       max-width: 20%;
+        max-width: 20%;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -382,7 +381,7 @@ img {
     // #recipetextbox input.vertical { 
     //   resize: vertical;
     // }
-// .modal {
+// #updateModal {
 //   display: none; /* Hidden by default */
 //   position: fixed; /* Stay in place */
 //   z-index: 1; /* Sit on top */
@@ -395,8 +394,8 @@ img {
 //   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 // }
 
-// /* Modal Content/Box */
-// .modal-content {
+/* Modal Content/Box */
+// #update-recipe {
 //   background-color: #fefefe;
 //   margin: 15% auto; /* 15% from the top and centered */
 //   padding: 20px;
@@ -404,7 +403,7 @@ img {
 //   width: 80%; /* Could be more or less, depending on screen size */
 // }
 
-// /* The Close Button */
+/* The Close Button */
 // .close {
 //   color: #aaa;
 //   float: right;
@@ -418,3 +417,116 @@ img {
 //   text-decoration: none;
 //   cursor: pointer;
 // }
+ 
+#login {
+  border: 3px solid white;
+  display: block;
+  font-size: 1.25vw;
+  background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);
+  input {
+    padding: .5em 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    // font-size: 2vw;
+  }
+}
+
+// .modal-dialog {
+//   border: 3px solid white;
+//   display: block;
+//   background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);
+// }
+
+// #createmodal {
+//   border: 3px solid white;
+//   display: block;
+//   background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);
+// }
+
+
+#sign-in {
+  font-size: 1.5em;
+  padding: .5em .25em;
+  color: rgb(19, 22, 84);
+  cursor: pointer;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+#sign-in button {
+  color: white;
+  padding: .5em 1em;
+  font-size: 2vw;
+  background-color: rgb(19, 22, 84);
+  border: 2px solid white;
+  &:hover {
+    color: black;
+    border-color: rgb(19, 22, 84);
+    background-color: rgb(121, 121, 150);
+    background: rgb(121, 121, 150)
+  }
+}
+
+#sign-up {
+  font-size: 1.5em;
+  padding: .5em .25em;
+  color: rgb(19, 22, 84);;
+  cursor: pointer;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+#sign-up button {
+  color: white;
+  padding: .5em 1em;
+  font-size: 2vw;
+  background-color: rgb(19, 22, 84);
+  border: 2px solid white;
+  &:hover {
+    color: black;
+    border-color: rgb(19, 22, 84);
+    background-color: rgb(121, 121, 150);
+    background: rgb(121, 121, 150)
+  }
+}
+
+#sign-out {
+  font-size: 1.5em;
+  padding: .5em .25em;
+  color: rgb(19, 22, 84);
+  cursor: pointer;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+#sign-out button {
+  color: white;
+  padding: .5em 1em;
+  font-size: 2vw;
+  background-color: rgb(19, 22, 84);
+  border: 2px solid white;
+  &:hover {
+    color: black;
+    border-color: rgb(19, 22, 84);
+    background-color: rgb(121, 121, 150);
+    background: rgb(121, 121, 150)
+  }
+}
+
+#change-password {
+  font-size: 1.5em;
+  padding: .5em .25em;
+  color: rgb(19, 22, 84);
+  cursor: pointer;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+#change-password button {
+  color: white;
+  padding: .5em 1em;
+  font-size: 2vw;
+  background-color: rgb(19, 22, 84);
+  border: 2px solid white;
+  &:hover {
+    color: black;
+    border-color:rgb(19, 22, 84);
+    background-color: rgb(121, 121, 150);
+    background: rgb(121, 121, 150)
+  }
+}

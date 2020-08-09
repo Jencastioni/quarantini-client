@@ -49,6 +49,8 @@ const onUpdateRecipeSuccess = () => {
   $('form').trigger('reset')
   $('.all-recipes').hide()
   $('.all-recipes').empty()
+  $('.update-button').hide()
+  $('#updateModal').empty()
 }
 
 const onUpdateRecipeFailure = () => {

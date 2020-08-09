@@ -5,7 +5,6 @@ const store = require('../store.js')
 
 const createRecipe = (formData) => {
   const recipe = formData
-  console.log(recipe)
   return $.ajax({
      headers: {
        Authorization: 'Bearer ' + store.user.token
@@ -16,8 +15,8 @@ const createRecipe = (formData) => {
   })
 }
 
+
 const indexRecipe = function () {
-  console.log('recipe index works')
    return $.ajax({
      headers: {
        Authorization: 'Bearer ' + store.user.token
@@ -73,5 +72,4 @@ module.exports = {
   showRecipe,
   updateRecipe,
   deleteRecipe,
-//   // indexMyRecipe
 }

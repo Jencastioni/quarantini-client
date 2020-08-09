@@ -45,74 +45,106 @@
           </form>
         </div>
       </div>
-      <div class="big-heading" id="heading"></div>
+
       <h1>Quarantini</h1>
-       <img src=https://i.pinimg.com/originals/f1/f9/92/f1f9921de4613d1b357dd11d4047fe1d.gif id="gif" alt="Cocktail Gif">
-      <h2 class="subhead">"Stay home and drink alone"</h2>
+        <h2 id="welcome">Bring the Bar to You!</h2>
+      <p id="sign-out-message"></p>
+      <div id="unauthenticated">
+        <img src=https://i.pinimg.com/originals/f1/f9/92/f1f9921de4613d1b357dd11d4047fe1d.gif id="gif" alt="Cocktail Gif">
         
+        <p id="age">Must be 21+ to enter</p>
         
-        
+      </div>
+      <div class="big-heading" id="authenticated">
+        <p id="login-message"></p>
+        <!-- <img src=https://i.pinimg.com/originals/f1/f9/92/f1f9921de4613d1b357dd11d4047fe1d.gif id="gif" alt="Cocktail Gif"> -->
+        <h2 class="subhead">"Stay Home And Drink Alone"</h2>
         <img src="https://makemeacocktail.com/blog/wp-content/uploads/2019/02/a1.jpg" alt="Cocktail Bar">
-       
         <h3>Post Your Perfect Quarantine Cocktail</h3>
         <p id="message"></p>
-
       </div>
     
       <div class="recipe-buttons">
-          <!-- <button id="add-recipe" type="submit" class="btn btn-primary">Add Recipe</button> -->
-          <!-- <button id="see-recipes" type="submit" class="btn btn-primary">See My Recipes</button> -->
-          <!-- <button id="-recipe">Add Recipe</button> -->
-        
           <form id="create-cocktail" class="authenticated">
             <ul>
              <li>
                <label for="name">Cocktail:</label>
                <input type="text" id="cocktail-name" name="title">
              </li>
-             
              <div id="recipetextbox">
              <li>
                <label for="text">Recipe:</label>
-               <input type="text" id="textbox" name="text" class="vertical"></input>
+               <input type="text" id="textbox" name="text" id="create-textbox" class="vertical"></input>
              </li>
             </div>
-             <!-- <li>
-              <label for="text">Steps:</label>
-              <input type="text" name="text"></input>
-            </li> -->
              <li class="button">
               <button id="add-recipe" type="submit">Save Your Cocktail</button>
             </li>
             </ul>
           </form>
+    
 
           <form id="index" class="authenticated">
-            <button id="see-recipes" type="submit" class="btn btn-primary">See My Recipes</button>
+            <button id="see-recipes" type="submit" class="btn btn-primary">See My Cocktails</button>
           </form>
 
           <div class="all-recipes"></div>
 
-          <form id="update-recipe" class="authenticated">
+          <!-- <form id="update-recipe" class="authenticated">
             <input name="recipe[id]" type="text" placeholder="ID">
             <input name="recipe[title]" type="text" placeholder="Cocktail">
             <input name="recipe[text]" type="text" placeholder="Recipe">
             <button type="submit">Update</button>
-          </form>
-          <!-- <div class="index">
-            <button id="see-recipes" class="btn btn-primary">See My Recipes</button>
-            <button id="delete-recipe" type="button" class="btn btn-primary">Delete My Recipes</button>
-          </div> -->
-          <!-- <form id="delete" class="authenticated">
-            <button id="delete-recipe" type="button" class="btn btn-primary">Delete My Recipes</button>
-          </form> -->
-          <!-- <main>
-            <div id="content" class="content"></div>
-          </main>
-         -->
+        </form> -->
 
- 
-      <!-- </div> 
+  <!-- Modal -->
+  <button class="update-button" data-id="{{recipe._id}}" data-toggle="modal" data-target="#updateModal">Update</button>
+    <div id="updateModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 auto;">
+            <h2 class="modal-title">Update Your Cocktail</h2>
+          </div>
+          <div class="modal-body"style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 0;">
+            <form id="update-recipe" class="form" style="margin:10px;padding:5px;">
+              ID:<br> <input name="recipe[id]" type="text" id="update-modal-id" placeholder="Recipe ID"><br>
+              Cocktail:<br> <input name="recipe[title]" type="text" id="update-modal-cocktail" placeholder="Cocktail"><br>
+              Recipe: <input name="recipe[text]" type="text" id="update-textbox" placeholder="Recipe"><br>
+              <button id="update-button" class="form" data-target="#updateModal">Update Cocktail</button>
+            </form>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="update-modal-dismiss" data-dismiss="modal" style="font:white;border:black">Close</button>
+          </div>
+         </div> 
+        </div>
+       </div>
+     </div>
+<!-- 
+     <button class="create-button" data-id="{{recipe._id}}" data-toggle="modal" data-target="#createModal">Create</button>
+     <div id="createModal" class="modal fade" tabindex="-1" role="dialog">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 auto;">
+             <h2 class="modal-title">Create Your Cocktail</h2>
+           </div>
+           <div class="modal-body"style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 auto;">
+             <form id="create-cocktail" class="form" style="margin:00px;padding:0px;">
+               ID: <input name="recipe[id]" type="text" placeholder="Recipe ID">
+               Cocktail: <input name="recipe[title]" id="cocktail-name" type="text" placeholder="Cocktail"><br>
+               Recipe: <input name="recipe[text]" type="text" placeholder="Recipe"><br>
+               <button id="create-button" class="form" data-target="#createModal">Create Cocktail</button>
+             </form>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-default" data-dismiss="modal" style="font:white;border:black;padding: .5em 2em">Close</button>
+           </div>
+          </div>
+         </div>
+        </div>
+      </div> -->
+
+    
+
+      <!-- </div>
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">

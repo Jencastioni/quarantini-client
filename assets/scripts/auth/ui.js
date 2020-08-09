@@ -6,37 +6,38 @@ $('.recipe-buttons').hide()
 $('.big-heading').hide()
 
 const signUpSuccess = function () {
-    $('#message').text('You Created an Account!')
-   
+    $('#login-message').text('You Created an Account!')
+    $('#sign-out-message').hide()
     $('form').trigger('reset')
 }
 
 const signUpFailure = function () {
-    $('#message').text('Try a different Password!')
+    $('#login-message').text('Try a different Password!')
 }
 
 const signInSuccess = function (response) {
    store.user = response.user  
-   $('#message').text('You Have Signed In! Welcome!')
+   $('#login-message').text('You Have Signed In! Welcome!')
    
 
     $('#authenticated').show()
     $('#unauthenticated').hide()
-
+    $('#age').hide()
     $('.recipe-buttons').show()
     $('.big-heading').show()
     $('form').trigger('reset')
+    $('#gif').hide()
   }
   
   const signInFailure = function () {
-    $('#message').text('Sign in Failed :(')
+    $('#login-message').text('Sign in Failed :(')
 
     $('form').trigger('reset')
   }
   
 
   const changePasswordSuccess = function () {
-    $('#message').text('Your Password has Been Changed!')
+    $('#login-message').text('Your Password has Been Changed!')
     $('#authenticated').show()
     $('#unauthenticated').hide()
 
@@ -44,13 +45,13 @@ const signInSuccess = function (response) {
   }
   
   const changePasswordFailure = function () {
-    $('#message').text('Unable to Change Password :( ')
+    $('#login-message').text('Unable to Change Password :( ')
 
     $('form').trigger('reset')
   }
   
   const signOutSuccess = function () {
-    $('#message').text('See You Soon!')
+    $('#sign-out-message').text('Come Back Soon!')
     $('#unauthenticated').show()
     $('#authenticated').hide()
 
@@ -58,12 +59,13 @@ const signInSuccess = function (response) {
   
     $('.recipe-buttons').hide()
     $('.big-heading').hide()
-    
+    $('#age').show()
+    $('#gif').show()
     store.user = null
   }
   
   const signOutFailure = function () {
-    $('#message').text('Unable to Sign Out :(')
+    $('login-#message').text('Unable to Sign Out :(')
   }
   
   module.exports = {

@@ -47,7 +47,7 @@
       </div>
 
       <h1>Quarantini</h1>
-        <h2 id="welcome">Bring the Bar to You!</h2>
+        
       <p id="sign-out-message"></p>
       <div id="unauthenticated">
         <img src=https://i.pinimg.com/originals/f1/f9/92/f1f9921de4613d1b357dd11d4047fe1d.gif id="gif" alt="Cocktail Gif">
@@ -58,8 +58,10 @@
       <div class="big-heading" id="authenticated">
         <p id="login-message"></p>
         <!-- <img src=https://i.pinimg.com/originals/f1/f9/92/f1f9921de4613d1b357dd11d4047fe1d.gif id="gif" alt="Cocktail Gif"> -->
+        <img src="https://cdn.vox-cdn.com/thumbor/ywnBsybJbMA-nCd6cpR-CRpjaFk=/0x0:2000x1360/1200x675/filters:focal(840x520:1160x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63272828/No_kisses_bar.0.jpg" id="bar-image" alt="Neon Bar">
+        <h2 id="welcome">Bring the Bar to You!</h2>
         <h2 class="subhead">"Stay Home And Drink Alone"</h2>
-        <img src="https://makemeacocktail.com/blog/wp-content/uploads/2019/02/a1.jpg" alt="Cocktail Bar">
+        <img src="https://makemeacocktail.com/blog/wp-content/uploads/2019/02/a1.jpg" id="dif-cocktails" alt="Cocktail Bar">
         <h3>Post Your Perfect Quarantine Cocktail</h3>
         <p id="message"></p>
       </div>
@@ -74,7 +76,10 @@
              <div id="recipetextbox">
              <li>
                <label for="text">Recipe:</label>
-               <input type="text" id="textbox" name="text" id="create-textbox" class="vertical"></input>
+               
+                 <textarea type="text" id="textbox" name="text" class="create-textbox"></textarea>
+               
+               </li>
              </li>
             </div>
              <li class="button">
@@ -102,18 +107,18 @@
     <div id="updateModal" class="modal fade" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 auto;">
+          <div class="modal-header" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 0;">
             <h2 class="modal-title">Update Your Cocktail</h2>
           </div>
           <div class="modal-body"style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 0;">
             <form id="update-recipe" class="form" style="margin:10px;padding:5px;">
-              ID:<br> <input name="recipe[id]" type="text" id="update-modal-id" placeholder="Recipe ID"><br>
-              Cocktail:<br> <input name="recipe[title]" type="text" id="update-modal-cocktail" placeholder="Cocktail"><br>
-              Recipe: <input name="recipe[text]" type="text" id="update-textbox" placeholder="Recipe"><br>
+              ID:<br> <input name="recipe[id]" type="text" id="update-modal-id" style="width:90%" placeholder="Recipe ID"><br>
+              Cocktail:<br> <input name="recipe[title]" type="text" id="update-modal-cocktail" style="width:90%" placeholder="Cocktail"><br>
+              Recipe: <textarea name="recipe[text]" type="text" id="update-textbox" style="width:90%" placeholder="Recipe"></textarea><br>
               <button id="update-button" class="form" data-target="#updateModal">Update Cocktail</button>
             </form>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" id="update-modal-dismiss" data-dismiss="modal" style="font:white;border:black">Close</button>
+            <button id="btnSave" type="button" class="btn btn-default" id="update-modal-dismiss" data-dismiss="modal" style="color:white;border:black">Close</button>
           </div>
          </div> 
         </div>
@@ -195,7 +200,7 @@
     </div>
   </div> -->
 
-
+ 
     </body>
 </html>
 

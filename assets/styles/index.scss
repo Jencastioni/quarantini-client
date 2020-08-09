@@ -37,6 +37,13 @@ img {
     width: 60%;
 }
 
+#bar-image {
+  padding-bottom: 20px;
+}
+#dif-cocktails {
+  padding-bottom: 150px;
+}
+
   h1 {
     margin: 10px, 0, 10px, 10px;
     margin-bottom: 0;
@@ -73,10 +80,9 @@ img {
   margin: .5em;
   margin-top: 0;
 }
-// #welcome {
-//   margin: 25px;
-//   padding: 50px;
-// }
+#welcome {
+  padding-bottom: 150px;
+}
   h2 {
     text-align: center;
     font-family: 'Bubblegum Sans', cursive;
@@ -147,6 +153,9 @@ img {
   }
 
   // UPDATE MODAL
+  #modal-header {
+    width: 90%;
+  }
   #update-textbox   {
     /* To make sure that all text fields have the same font settings
        By default, textareas have a monospace font */
@@ -183,6 +192,9 @@ img {
     // // max-width: 90%;
     // box-sizing: border-box;
     // margin-bottom: 1em;
+  }
+  #update-modal-dismiss {
+    font: white;
   }
 
   .update-recipe {
@@ -289,7 +301,7 @@ img {
     margin-right: 40%;
   }
   
-#create-textbox   {
+.create-textbox   {
     /* To make sure that all text fields have the same font settings
        By default, textareas have a monospace font */
     font: 1em sans-serif;
@@ -298,8 +310,9 @@ img {
     max-width: 400px;
     box-sizing: border-box;
     margin-bottom: 1em;
-    
-  
+    resize: none;
+    max-width: 100%; 
+    max-height: 100%;
     /* Match form field borders */
     border: 1px solid #999;
   }
@@ -315,8 +328,39 @@ img {
     min-height:300px;
     width: 90%;
     padding-bottom: 250px;
+    resize: none;
 
+    max-width: 100%; 
+    max-height: 100%;
   }
+
+  #recipe-text {
+    resize: none;
+    background-color:#FFF;
+    min-height:300px;
+    width: 90%;
+    padding-bottom: 250px;
+    resize: none;
+
+    max-width: 100%; 
+    max-height: 100%;
+  }
+    // #textbox-wrapper {
+    //   padding: 10px;
+    //   background-color: #f4f4f4;
+    //   width: 90%;
+    // }
+    
+    // #textbox-wrapper textarea {
+    //   min-height:50px;
+    //   max-height:120px;
+    //   width: 90%;
+    // }
+    
+    // #textbox-wrapper textarea.vertical { 
+    //   resize: vertical;
+    // }
+  
   // textarea {
   //   /* Align multiline text fields with their labels */
   //   vertical-align: top;
@@ -334,6 +378,7 @@ img {
     /* This extra margin represent roughly the same space as the space
        between the labels and their text fields */
        padding: .5em .5em;
+       margin: .5em;
        font-size: 3vw;
        color: white;
        background-color:rgb(19, 22, 84);
@@ -422,12 +467,19 @@ img {
   border: 3px solid white;
   display: block;
   font-size: 1.25vw;
-  background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);
+  // background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);
+  background: linear-gradient(45deg, #8808f9, #eb206e, #1856ff, #00ffc3);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
   input {
     padding: .5em 1em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     // font-size: 2vw;
   }
+}
+
+#login-message {
+  padding-top: 0;
 }
 
 // .modal-dialog {
@@ -530,3 +582,22 @@ img {
     background: rgb(121, 121, 150)
   }
 }
+
+// body {
+//   background: linear-gradient(-45deg, #630a79, #23a6d5, #00ffc3);
+//   background-size: 400% 400%;
+//   animation: gradient 15s ease infinite;
+// }
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+

@@ -23,7 +23,7 @@ const indexRecipeSuccess = function (response) {
   $('.all-recipes').append(showRecipeHTML)
   // $('#index').hide()
   $('#message').text('Here are your cocktails!')
-  
+  // $('.update-button').show()
   
 }
 
@@ -43,14 +43,13 @@ const indexRecipeFailure = function () {
 // }
 
 const onUpdateRecipeSuccess = () => {
-  // $('.all-recipes').hide() 
   // $('input').trigger('reset')
   $('#message').text("Cocktail Updated!")
   $('form').trigger('reset')
   $('.all-recipes').hide()
   $('.all-recipes').empty()
-  $('.update-button').hide()
-  $('#updateModal').empty()
+  $('.update-button').modal('hide')
+  // $('#updateModal').empty()
 }
 
 const onUpdateRecipeFailure = () => {

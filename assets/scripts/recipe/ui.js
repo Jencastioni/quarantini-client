@@ -55,7 +55,7 @@ const onUpdateRecipeSuccess = () => {
  
   $('.all-recipes').hide()
   $('.all-recipes').empty()
-  $('.update-button').hide()
+  // $('.update-button').hide()
   $('.update-modal').modal('hide')
   $('form').trigger('reset')
   
@@ -69,6 +69,7 @@ const onUpdateRecipeFailure = () => {
 
 
 const onDeleteRecipeSuccess = () => {
+  $('#myModalMessage').modal('show')
   $('#message').text('Your recipe was deleted!')
   $('#index').show()
   

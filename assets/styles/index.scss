@@ -100,7 +100,14 @@ img {
     margin: .5em;
     margin-top: 0;
   }
+  .modal-title {
+    
+    font-size: 75px;
+  }
 
+  .modal-body, p {
+    font-size: 25px;
+  }
   h3 {
     text-align: center;
     font-family: 'Bubblegum Sans', cursive;
@@ -159,6 +166,15 @@ img {
       background: rgb(121, 121, 150)
     }
   }
+#update-message {
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 4vw;
+    color: white;
+    text-shadow: 4px 4px rgb(19, 22, 84);
+    margin: 1em;
+  
+}
 
   // UPDATE MODAL
   #modal-header {

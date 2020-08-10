@@ -33,15 +33,23 @@ img {
     margin-left: auto;
     margin-right: auto;
     margin-top: 50px;
-    border-radius: 8px;
+    border-radius: 5%;
     width: 60%;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
 }
 
 #bar-image {
   padding-bottom: 20px;
+  border-radius: 5%;
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
 }
 #dif-cocktails {
   padding-bottom: 150px;
+  border-radius: 5%;
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
 }
 
   h1 {
@@ -400,7 +408,9 @@ img {
         margin-right: auto;
         margin-bottom: 40px;
         margin-top: 0;
-        border-radius: 8px;
+        border-radius: 5%;
+        border-bottom-right-radius: 5%;
+        border-bottom-left-radius: 5%;
       
     }
 
@@ -464,7 +474,8 @@ img {
 // }
  
 #login {
-  border: 3px solid white;
+  border: 1px solid white;
+  // border-radius: 3%;
   display: block;
   font-size: 1.25vw;
   // background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);
@@ -507,13 +518,14 @@ img {
   color: white;
   padding: .5em 1em;
   font-size: 2vw;
-  background-color: rgb(19, 22, 84);
+  background:linear-gradient(45deg, #8808f9, #1856ff, #00ffc3);
+  animation: gradient 15s ease infinite;
   border: 2px solid white;
   &:hover {
     color: black;
     border-color: rgb(19, 22, 84);
-    background-color: rgb(121, 121, 150);
-    background: rgb(121, 121, 150)
+    // background-color: 1856ff;
+    background: linear-gradient(-45deg, #eb206e, #1856ff, #00ffc3);;
   }
 }
 

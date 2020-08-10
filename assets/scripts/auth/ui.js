@@ -4,21 +4,24 @@ const store = require('../store')
 
 $('.recipe-buttons').hide()
 $('.big-heading').hide()
+$('#sign-out-message').hide()
 
 const signUpSuccess = function () {
-    $('#login-message').text('You Created an Account!')
-    $('#sign-out-message').hide()
+    $('#sign-out-message').text('You Created an Account!')
+    $('#sign-out-message').show()
     $('form').trigger('reset')
+    // $('.big-heading').show()
+  
 }
 
 const signUpFailure = function () {
-    $('#login-message').text('Try a different Password!')
+    $('#sign-out-message').text('Try a different Password!')
 }
 
 const signInSuccess = function (response) {
    store.user = response.user  
    $('#login-message').text('You Have Signed In! Welcome!')
-   
+   $('#sign-out-message').hide()
 
     $('#authenticated').show()
     $('#unauthenticated').hide()
@@ -52,6 +55,7 @@ const signInSuccess = function (response) {
   
   const signOutSuccess = function () {
     $('#sign-out-message').text('Come Back Soon!')
+    $('#sign-out-message').show()
     $('#unauthenticated').show()
     $('#authenticated').hide()
 

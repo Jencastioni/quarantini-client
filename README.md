@@ -4,9 +4,9 @@ Quarantini is a single-page web application that works with a backend API. The a
 
 ## Important Links
 
-- [Other Repo](www.link.com)
-- [Deployed API](www.link.com)
-- [Deployed Client](www.link.com)
+- [Quarantini](https://jencastioni.github.io/quarantini-client/)
+- [Deployed API Repo](https://github.com/Jencastioni/quarantini-api)
+- [Deployed Client Repo](https://github.com/Jencastioni/quarantini-client)
 
 ## Planning Story
 
@@ -40,7 +40,7 @@ I created my Quarantini using a single-page web application. First I drew my Wir
 ## Images
 
 #### Wireframe:
-![wireframe](https://imgur.com/a/uEsY8a4)
+![Wireframe](https://imgur.com/a/uEsY8a4)
 
 ---
 

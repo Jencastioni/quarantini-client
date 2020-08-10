@@ -67,7 +67,6 @@ const onUpdateRecipeSuccess = () => {
 }
 
 const onUpdateRecipeFailure = () => {
-  console.log("Updated ui fail")
   $('#message').text('Your cocktail was not updated ;(')
 }
 
@@ -81,7 +80,6 @@ const onDeleteRecipeSuccess = () => {
 }
 
 const onDeleteRecipeFailure = () => {
-  console.log("deleted ui fail")
   $('#message').text('Your recipe was not deleted ;(')
 }
 

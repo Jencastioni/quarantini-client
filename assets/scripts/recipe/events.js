@@ -14,7 +14,6 @@ const onCreateRecipe = function (event) {
 
 const onIndexRecipe = function (event) {
    event.preventDefault()
-   console.log(event)
    
    const usersRecipe = store.user.token
  
@@ -36,10 +35,8 @@ const onIndexRecipe = function (event) {
 
 const onDeleteRecipe = function (event) {
   event.preventDefault()
-  console.log('this is the event', event)
   // const deleteRecipe = store.user.token
   const recipeId = $(event.target).closest('section').data('id')
-  console.log('recipe id=', recipeId)
 
   api.deleteRecipe(recipeId)
     .then(ui.onDeleteRecipeSuccess)

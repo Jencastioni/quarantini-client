@@ -7,7 +7,6 @@ const recipe = require('../recipe/events')
 
 const onSignUp = function (event) {
     event.preventDefault()
-    console.log('event worked')
     const form = event.target
     const formData = getFormFields(form)
     api.signUp(formData)

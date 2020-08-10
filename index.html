@@ -96,15 +96,12 @@
              </li>
              <div id="recipetextbox">
              <li>
-               <label for="text">Recipe:</label>
-               
-                 <textarea type="text" id="textbox" name="text" class="create-textbox"></textarea>
+               <label for="recipe">Recipe:</label>
+                 <textarea type="text" id="textbox" name="recipe" class="create-textbox"></textarea>
              </li>
              <li>
-              <label for="text">Comments:</label>
-              
-                <textarea type="text" id="textbox-comments" name="text" class="create-textbox-comments"></textarea>
-              
+              <label for="comments">Comments:</label>
+                <textarea type="text" id="textbox-comments" name="comments" class="create-textbox-comments"></textarea>
               </li>
             </div>
              <li class="button">
@@ -116,7 +113,7 @@
            <!-- Message Modal -->
            <div class="modal fade" id="myModalMessage" tabindex="-1" role="dialog">
             <div class="modal-dialog">
-              <div class="modal-content" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 0;">
+              <div class="modal-content" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);margin: 0 0;">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal"></button>
                   <h2 class="modal-title">Quarantini</h2>
@@ -160,8 +157,8 @@
             <form id="update-recipe" class="form" style="margin:10px;padding:5px;">
               ID:<br> <input name="recipe[id]" type="text" id="update-modal-id" style="width:90%" placeholder="Recipe ID"><br>
               Cocktail:<br> <input name="recipe[title]" type="text" id="update-modal-cocktail" style="width:90%" placeholder="Cocktail"><br>
-              Recipe: <textarea name="recipe[text]" type="text" id="update-textbox" style="width:90%" placeholder="Recipe"></textarea><br>
-              Comments: <textarea name="recipe[comments]" type="text" id="update--textbox" style="width:90%;" placeholder="Comments"></textarea><br>
+              Recipe: <textarea name="recipe[recipe]" type="text" id="update-textbox" style="width:90%" placeholder="Recipe"></textarea><br>
+              Comments: <textarea name="recipe[comments]" type="text" id="update-textbox-comments" style="width:90%;" placeholder="Comments"></textarea><br>
               <button id="update-button" class="form" data-toggle="modal" data-target="#updateModal">Update Cocktail</button>
             </form>
             <div class="modal-footer">
@@ -213,58 +210,6 @@
       </div> -->
 
     
-
-      <!-- </div>
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Update recipe</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form id="update-recipes">
-                <input name="title" type="text" placeholder="Cocktail">
-                <input name="text" type="number" placeholder="Recipe">
-                <button type="submit" data-id="{{recipe._id}}" class="btn btn-info update-recipe">Update</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div> -->
-    <!-- Trigger/Open The Modal -->
-
-
-  <!-- UPDATE BLOG MODAL -->
-  <!-- <div id="update-recipe-modal" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Update Your Recipe</h5>
-          <button type="button" class="close cancel" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div> -->
-        <!-- UPDATE BLOG FORM -->
-        <!-- <form id="update-recipe" class="blog-crud-form d-flex flex-column" data-action="create">
-          <div class="modal-body col-12">
-            <p class="my-1">Cocktail Name</p>
-            <input class="col-12 my-2" name="recipe[title]" type="text" placeholder="Update your recipe title here" maxlength="32" required>
-            <p class="my-1">Ingredients</p>
-            <textarea id="blog-body-textarea" class="col-12 my-2" name="recipe[text]" placeholder="Ingredients" maxlength="10000" required></textarea>
-          </div> -->
-
-          <!-- <div class="modal-footer">
-            <button class="btn btn-success" type="submit">Update your Recipe</button>
-            <button class="btn btn-secondary cancel" type="button" data-dismiss="modal">Cancel</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div> -->
-
  
     </body>
 </html>

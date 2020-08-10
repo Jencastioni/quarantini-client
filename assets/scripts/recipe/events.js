@@ -30,16 +30,14 @@ const onIndexRecipe = function (event) {
 
   api.updateRecipe(formData)
     .then(ui.onUpdateRecipeSuccess)
-    // .then(function () {
-    //   onIndexRecipe(event)
-    // })
+  
     .catch(ui.onUpdateRecipeFailure)
 }
 
 const onDeleteRecipe = function (event) {
   event.preventDefault()
   console.log('this is the event', event)
-  // const deletedWhiskey = store.user.token
+  // const deleteRecipe = store.user.token
   const recipeId = $(event.target).closest('section').data('id')
   console.log('recipe id=', recipeId)
 

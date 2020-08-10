@@ -180,7 +180,7 @@ img {
   #modal-header {
     width: 90%;
   }
-  #update-textbox   {
+  #update-textbox, #update-textbox-comments   {
     /* To make sure that all text fields have the same font settings
        By default, textareas have a monospace font */
     font: 1em sans-serif;
@@ -515,9 +515,9 @@ img {
   display: block;
   font-size: 1.25vw;
   // background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);
-  background: linear-gradient(45deg, #8808f9, #eb206e, #1856ff, #00ffc3);
+  background: linear-gradient(45deg, #d84cf4, #eb206e, #6700f7, #1856ff, #00ffc3, #00ffc3);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  animation: gradient 10s ease infinite;
   input {
     padding: .5em 1em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

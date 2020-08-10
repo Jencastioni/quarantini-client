@@ -24,12 +24,17 @@ const indexRecipeSuccess = function (response) {
   $('.all-recipes').empty()
   $('.all-recipes').show()
   $('.all-recipes').append(showRecipeHTML)
-  // $('#index').hide()
-  $('#myModalMessage').modal('show')
-  $('#message').text('Here are your cocktails!')
+  
   $('.update-button').show()
   $('#update-message').hide()
-  
+ 
+  if (response.recipes.length === 0) {
+    $('#myModalMessage').modal('show')
+    $('#message').text('You need to create a cocktail first!')
+  } else {
+    $('#myModalMessage').modal('show')
+    $('#message').text('Here are your cocktails!')
+  }
 }
 
 const indexRecipeFailure = function () {
@@ -58,8 +63,7 @@ const onUpdateRecipeSuccess = () => {
   // $('.update-button').hide()
   $('.update-modal').modal('hide')
   $('form').trigger('reset')
-  
-  $('$.update-modal')
+
 }
 
 const onUpdateRecipeFailure = () => {

@@ -3,7 +3,6 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const signUp = function (formData) {
-  console.log('api went through')
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',

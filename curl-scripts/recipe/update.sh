@@ -7,7 +7,7 @@ curl "http://localhost:4741/recipe/${ID}" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data '{
     "recipe": {
-      "text": "'"${TEXT}"'"
+      "recipe": "'"${RECIPE}"'"
     }
   }'
 

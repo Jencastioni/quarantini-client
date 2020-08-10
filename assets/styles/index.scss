@@ -329,13 +329,29 @@ img {
     border: 1px solid #999;
   }
 
+  .create-textbox-comments   {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em sans-serif;
+  
+    /* Uniform text field size */
+    max-width: 400px;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    resize: none;
+    max-width: 100%; 
+    max-height: 100%;
+    /* Match form field borders */
+    border: 1px solid #999;
+  }
+
   input:focus, 
   textarea:focus {
     /* Additional highlight for focused elements */
     border-color: #000;
   }
   
-  #textbox {
+  #textbox, #textbox-comments {
     background-color:#FFF;
     min-height:300px;
     width: 90%;

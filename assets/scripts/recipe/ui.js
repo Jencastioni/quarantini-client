@@ -9,6 +9,7 @@ const createRecipeSuccess = () => {
   $('form').trigger('reset')
   $('#message').text("Cocktail Created!")
   $('.all-recipes').hide() //index
+  $('.update-button').show()
 }
 const createRecipeFailure = function () {
   $('#message').text('Failed to upload your cocktail :(')
@@ -23,7 +24,7 @@ const indexRecipeSuccess = function (response) {
   $('.all-recipes').append(showRecipeHTML)
   // $('#index').hide()
   $('#message').text('Here are your cocktails!')
-  // $('.update-button').show()
+  $('.update-button').show()
   
 }
 
@@ -45,13 +46,15 @@ const indexRecipeFailure = function () {
 const onUpdateRecipeSuccess = () => {
   // $('input').trigger('reset')
   $('#message').text("Cocktail Updated!")
-  $('form').trigger('reset')
+  // $('form').trigger('reset')
   $('.all-recipes').hide()
   $('.all-recipes').empty()
-  // $('.update-button').modal('hide')
+  $('.update-button').hide()
   $('.update-modal').modal('hide')
-  $('.modal-content').modal('hide')
-  $('.model').hide()
+  $('form').trigger('reset')
+  // $('.update-modal').hide()
+  // $('.modal-content').modal('hide')
+  // $('.model').hide()
 }
 
 const onUpdateRecipeFailure = () => {

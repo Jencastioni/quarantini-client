@@ -275,6 +275,10 @@ img {
     display: none;
   }
 
+  // .update-modal {
+  //   display: none;
+  // }
+
 
   #create-cocktail {
     /* Center the form on the page */
@@ -518,14 +522,23 @@ img {
   color: white;
   padding: .5em 1em;
   font-size: 2vw;
-  background:linear-gradient(45deg, #8808f9, #1856ff, #00ffc3);
-  animation: gradient 15s ease infinite;
+  // background:linear-gradient(45deg, #8808f9, #1856ff, #00ffc3);
+
+  // animation: gradient 15s ease infinite;
+  // border: 2px solid white;
+  // &:hover {
+  //   color: black;
+  //   border-color: rgb(19, 22, 84);
+  //   // background-color: 1856ff;
+  //   background: linear-gradient(-45deg, #eb206e, #1856ff, #00ffc3);;
+  // }
+  background-color: rgb(19, 22, 84);
   border: 2px solid white;
   &:hover {
     color: black;
     border-color: rgb(19, 22, 84);
-    // background-color: 1856ff;
-    background: linear-gradient(-45deg, #eb206e, #1856ff, #00ffc3);;
+    background-color: rgb(121, 121, 150);
+    background: rgb(121, 121, 150)
   }
 }
 

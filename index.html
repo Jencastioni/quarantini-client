@@ -27,7 +27,7 @@
           <form id="sign-in">
             <input name="credentials[email]" placeholder="email here" type="email">
             <input name="credentials[password]" placeholder="password here" type="password">
-           <button type="submit" class="btn btn-primary">Sign In</button>
+            <button type="submit" class="btn btn-primary">Sign In</button>
           </form>   
         </div>
 
@@ -36,13 +36,34 @@
             <div id="placeholder">
               <input name="passwords[old]" placeholder="old password" type="password">
               <input name="passwords[new]" placeholder="new password" type="password">
-          </div>
-           <button type="submit" class="btn btn-primary">Change Password</button>
+              <button type="submit" class="btn btn-primary">Change Password</button>
+            </div>
           </form>
 
          <form id="sign-out">
            <button type="submit" class="btn btn-primary">Sign Out</button>
           </form>
+
+          <!-- Sign in Modal (About) -->
+          <div class="modal fade" id="myModalAbout" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 0;">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"></button>
+                  <h2 class="modal-title">Welcome to Quarantini!</h2>
+                </div>
+                <div class="modal-body">
+                  <p>Making your time stuck at home more bearable. <br></p>
+                    <p>You can add your favorite cocktail recipes with comments, check out the ones you saved, add more, or update them.</p>
+                  <p>To update, make sure you grab the cocktail's ID first!</p>
+                  <p>Please drink responsibly</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal"style="color:white;border:black">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -78,9 +99,13 @@
                <label for="text">Recipe:</label>
                
                  <textarea type="text" id="textbox" name="text" class="create-textbox"></textarea>
-               
-               </li>
              </li>
+             <li>
+              <label for="text">Comments:</label>
+              
+                <textarea type="text" id="textbox" name="text" class="create-textbox"></textarea>
+              
+              </li>
             </div>
              <li class="button">
               <button id="add-recipe" type="submit">Save Your Cocktail</button>
@@ -103,9 +128,9 @@
         </form> -->
 
   <!-- Modal -->
-  <div id="update-modal">
+  <div class="update-modal">
     <button class="update-button" data-id="{{recipe._id}}" data-toggle="modal" data-target="#updateModal">Update</button>
-  </div>
+  
     <div id="updateModal" class="modal fade" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -117,15 +142,34 @@
               ID:<br> <input name="recipe[id]" type="text" id="update-modal-id" style="width:90%" placeholder="Recipe ID"><br>
               Cocktail:<br> <input name="recipe[title]" type="text" id="update-modal-cocktail" style="width:90%" placeholder="Cocktail"><br>
               Recipe: <textarea name="recipe[text]" type="text" id="update-textbox" style="width:90%" placeholder="Recipe"></textarea><br>
-              <button id="update-button" class="form" data-target="#updateModal">Update Cocktail</button>
+              Comments: <textarea name="recipe[comments]" type="text" id="update--textbox" style="width:90%;" placeholder="Comments"></textarea><br>
+              <button id="update-button" class="form" data-toggle="modal" data-target="#updateModal">Update Cocktail</button>
             </form>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" id="update-modal-dismiss" data-dismiss="modal" style="color:white;border:black">Close</button>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" style="color:white;border:black">Close</button>
+            </div>
           </div>
-        </div>
        </div>
     </div>
+  </div>
    
+  <!-- <div class="modal fade" id="myModalAbout" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"></button>
+          <h4 class="modal-title">You're Signed In!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Welcome to Quarantini! <br> Making your time at home more bearable. <br> You can add your favorite cocktail recipes, check out the recipes you saved, add more, or update your cocktails and comments.</p>
+          <p>To update, make sure you grab the cocktail's ID first!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">About</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
 <!-- 
      <button class="create-button" data-id="{{recipe._id}}" data-toggle="modal" data-target="#createModal">Create</button>
      <div id="createModal" class="modal fade" tabindex="-1" role="dialog">

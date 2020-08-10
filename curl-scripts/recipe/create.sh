@@ -8,7 +8,8 @@ curl "http://localhost:4741/recipe" \
     --data '{
         "recipe": {
             "text": "'"${TEXT}"'",
-            "title": "'"${TITLE}"'"
+            "title": "'"${TITLE}"'",
+            "comments": "'"${COMMENTS}"'"
         }
     }'
 

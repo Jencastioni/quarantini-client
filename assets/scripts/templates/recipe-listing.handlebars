@@ -7,14 +7,21 @@
       {{else}}
         No ID provided.
         {{/if}}
-    <h6>Title:
+    <h6>Cocktail:
       {{#if recipe.title}}
         {{recipe.title}}
       {{else}}
         No name provided.
       {{/if}}
     </h6>
-    <h6>Text: 
+    <h6>Recipe: 
+      {{#if recipe.text}}
+        {{recipe.text}}
+      {{else}}
+        No name provided.
+      {{/if}}
+    </h6>
+     <h6>Comments: 
       {{#if recipe.text}}
         {{recipe.text}}
       {{else}}

@@ -16,25 +16,31 @@ const signUpSuccess = function () {
 
 const signUpFailure = function () {
     $('#sign-out-message').text('Try a different Password!')
+    $('#sign-out-message').show()
+    $('form').trigger('reset')
 }
 
 const signInSuccess = function (response) {
    store.user = response.user  
-   $('#login-message').text('You Have Signed In! Welcome!')
+  
+   $('#myModalAbout').modal('show')
+  //  $('#login-message').text('You Have Signed In! Welcome!')
    $('#sign-out-message').hide()
 
     $('#authenticated').show()
     $('#unauthenticated').hide()
     $('#age').hide()
     $('.recipe-buttons').show()
+
     $('.big-heading').show()
     $('form').trigger('reset')
     $('#gif').hide()
+    $('.update-button').show()
   }
   
   const signInFailure = function () {
-    $('#login-message').text('Sign in Failed :(')
-
+    $('#sign-out-message').text('Sign in Failed :(')
+    $('#sign-out-message').show()
     $('form').trigger('reset')
   }
   
@@ -54,7 +60,7 @@ const signInSuccess = function (response) {
   }
   
   const signOutSuccess = function () {
-    $('#sign-out-message').text('Come Back Soon!')
+    $('#sign-out-message').text('Be Safe Out There!')
     $('#sign-out-message').show()
     $('#unauthenticated').show()
     $('#authenticated').hide()

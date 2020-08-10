@@ -84,7 +84,7 @@
         <h2 class="subhead">"Stay Home And Drink Alone"</h2>
         <img src="https://makemeacocktail.com/blog/wp-content/uploads/2019/02/a1.jpg" id="dif-cocktails" alt="Cocktail Bar">
         <h3>Post Your Perfect Quarantine Cocktail</h3>
-        <p id="message"></p>
+        
       </div>
     
       <div class="recipe-buttons">
@@ -113,7 +113,26 @@
             </ul>
           </form>
     
+           <!-- Message Modal -->
+           <div class="modal fade" id="myModalMessage" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 0;">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"></button>
+                  <h2 class="modal-title">Quarantini</h2>
+                </div>
+                <div class="modal-body">
+                  <p id="message"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal"style="color:white;border:black">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End modal -->
 
+          <p id="update-message"></p>
           <form id="index" class="authenticated">
             <button id="see-recipes" type="submit" class="btn btn-primary">See My Cocktails</button>
           </form>

@@ -67,7 +67,8 @@ const onUpdateRecipeSuccess = () => {
 }
 
 const onUpdateRecipeFailure = () => {
-  $('#message').text('Your cocktail was not updated ;(')
+  $('#update-message').show()
+  $('#update-message').text("Your cocktail was not updated")
 }
 
 

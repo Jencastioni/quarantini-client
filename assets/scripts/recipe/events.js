@@ -29,7 +29,7 @@ const onIndexRecipe = function (event) {
 
   api.updateRecipe(formData)
     .then(ui.onUpdateRecipeSuccess)
-  
+    .then(() => onIndexRecipe(event))
     .catch(ui.onUpdateRecipeFailure)
 }
 
@@ -37,9 +37,11 @@ const onDeleteRecipe = function (event) {
   event.preventDefault()
   // const deleteRecipe = store.user.token
   const recipeId = $(event.target).closest('section').data('id')
-
+  
   api.deleteRecipe(recipeId)
+    
     .then(ui.onDeleteRecipeSuccess)
+    .then(() => onIndexRecipe(event).$('#message').text('Your recipe was deleted!'))
     .catch(ui.onDeleteRecipeFailure)
     
 }

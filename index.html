@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Quarantini</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      
+      <!-- <img src="https://blog.luckynuggetcasino.com/wp-content/uploads/2016/07/cocktail-banner.jpg" alt="Cocktail Banner"> -->
+      <div id="login">
+        <div id="unauthenticated">
+          
+          <form id="sign-up">
+            <input name="credentials[email]" placeholder="email here" type="text">
+            <input name="credentials[password]" placeholder="password here" type="password">
+            <input name="credentials[password_confirmation]" placeholder="confirm password here" type="password">
+            <button type="submit" class="btn btn-primary">Sign Up!</button>
+          </form>
+            
+          <form id="sign-in">
+            <input name="credentials[email]" placeholder="email here" type="email">
+            <input name="credentials[password]" placeholder="password here" type="password">
+            <button type="submit" class="btn btn-primary">Sign In</button>
+          </form>   
+        </div>
+
+        <div id="authenticated">
+          <form id="change-password">
+            <div id="placeholder">
+              <input name="passwords[old]" placeholder="old password" type="password">
+              <input name="passwords[new]" placeholder="new password" type="password">
+              <button type="submit" class="btn btn-primary">Change Password</button>
+            </div>
+          </form>
+
+         <form id="sign-out">
+           <button type="submit" class="btn btn-primary">Sign Out</button>
+          </form>
+
+          <!-- Sign in Modal (About) -->
+          <div class="modal fade" id="myModalAbout" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 0;">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"></button>
+                  <h2 class="modal-title">Welcome to Quarantini!</h2>
+                </div>
+                <div class="modal-body">
+                  <p>You're at home bar that makes quarantining at home a little more bearable. <br></p>
+                    <p>You can add your favorite cocktail recipes, check out the ones you saved, add more, or update them.</p>
+                  <p></p>
+                  <p>Please drink responsibly</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal"style="color:white;border:black">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1>Quarantini</h1>
+        
+      <p id="sign-out-message"></p>
+      <div id="unauthenticated">
+        <img src=https://i.pinimg.com/originals/f1/f9/92/f1f9921de4613d1b357dd11d4047fe1d.gif id="gif" alt="Cocktail Gif">
+        
+        <p id="age">Must be 21+ to enter</p>
+        
+      </div>
+      <div class="big-heading" id="authenticated">
+        <p id="login-message"></p>
+        <!-- <img src=https://i.pinimg.com/originals/f1/f9/92/f1f9921de4613d1b357dd11d4047fe1d.gif id="gif" alt="Cocktail Gif"> -->
+        <img src="https://cdn.vox-cdn.com/thumbor/ywnBsybJbMA-nCd6cpR-CRpjaFk=/0x0:2000x1360/1200x675/filters:focal(840x520:1160x840)/cdn.vox-cdn.com/uploads/chorus_image/image/63272828/No_kisses_bar.0.jpg" id="bar-image" alt="Neon Bar">
+        <h2 id="welcome">Bring the Bar to You!</h2>
+        <h2 class="subhead">"Stay Home And Drink Alone"</h2>
+        <img src="https://makemeacocktail.com/blog/wp-content/uploads/2019/02/a1.jpg" id="dif-cocktails" alt="Cocktail Bar">
+        <h3>Post Your Perfect Quarantine Cocktail</h3>
+        
+      </div>
+    
+      <div class="recipe-buttons">
+          <form id="create-cocktail" class="authenticated">
+            <ul>
+             <li>
+               <label for="name">Cocktail:</label>
+               <input type="text" id="cocktail-name" name="title">
+             </li>
+             <div id="recipetextbox">
+             <li>
+               <label for="recipe">Ingredients:</label>
+                 <textarea type="text" id="textbox" name="ingredients" class="create-textbox"></textarea>
+             </li>
+             <li>
+              <label for="comments">Directions:</label>
+                <textarea type="text" id="textbox-comments" name="directions" class="create-textbox-comments"></textarea>
+              </li>
+            </div>
+             <li class="button">
+              <button id="add-recipe" type="submit">Save Your Cocktail</button>
+            </li>
+            </ul>
+          </form>
+    
+           <!-- Message Modal -->
+           <div class="modal fade" id="myModalMessage" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);margin: 0 0;">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"></button>
+                  <h2 class="modal-title">Quarantini</h2>
+                </div>
+                <div class="modal-body">
+                  <p id="message"></p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal"style="color:white;border:black">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End modal -->
+
+          
+          <form id="index" class="authenticated">
+            <button id="see-recipes" type="submit" class="btn btn-primary">See My Cocktails</button>
+          </form>
+          
+          <div class="all-recipes"></div>
+
+          <!-- <form id="update-recipe" class="authenticated">
+            <input name="recipe[id]" type="text" placeholder="ID">
+            <input name="recipe[title]" type="text" placeholder="Cocktail">
+            <input name="recipe[text]" type="text" placeholder="Recipe">
+            <button type="submit">Update</button>
+        </form> -->
+        <p id="update-message"></p>
+  <!-- Modal -->
+  <!-- <div class="update-modal">
+    <button class="update-button" data-id="{{recipe._id}}" data-toggle="modal" data-target="#updateModal">Update</button>
+  
+    <div id="updateModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 0;">
+            <h2 class="modal-title">Update Your Cocktail</h2>
+          </div>
+          <div class="modal-body"style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 0;">
+            <form id="update-recipe" class="form" style="margin:10px;padding:5px;">
+              ID:<br> <input name="recipe[id]" type="text" id="update-modal-id" style="width:90%" placeholder="Recipe ID"><br>
+              Cocktail:<br> <input name="recipe[title]" type="text" id="update-modal-cocktail" style="width:90%" placeholder="Cocktail"><br>
+              Ingredients: <textarea name="recipe[ingredients]" type="text" id="update-textbox" style="width:90%" placeholder="Ingredients"></textarea><br>
+              Directions: <textarea name="recipe[directions]" type="text" id="update-textbox-comments" style="width:90%;" placeholder="Directions"></textarea><br>
+              <button id="update-button" class="form" data-toggle="modal" data-target="#updateModal">Update Cocktail</button>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" style="color:white;border:black">Close</button>
+            </div>
+          </div>
+       </div>
+    </div>
+  </div> -->
+   
+  <!-- <div class="modal fade" id="myModalAbout" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"></button>
+          <h4 class="modal-title">You're Signed In!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Welcome to Quarantini! <br> Making your time at home more bearable. <br> You can add your favorite cocktail recipes, check out the recipes you saved, add more, or update your cocktails and comments.</p>
+          <p>To update, make sure you grab the cocktail's ID first!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">About</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!-- 
+     <button class="create-button" data-id="{{recipe._id}}" data-toggle="modal" data-target="#createModal">Create</button>
+     <div id="createModal" class="modal fade" tabindex="-1" role="dialog">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 auto;">
+             <h2 class="modal-title">Create Your Cocktail</h2>
+           </div>
+           <div class="modal-body"style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 auto;">
+             <form id="create-cocktail" class="form" style="margin:00px;padding:0px;">
+               ID: <input name="recipe[id]" type="text" placeholder="Recipe ID">
+               Cocktail: <input name="recipe[title]" id="cocktail-name" type="text" placeholder="Cocktail"><br>
+               Recipe: <input name="recipe[text]" type="text" placeholder="Recipe"><br>
+               <button id="create-button" class="form" data-target="#createModal">Create Cocktail</button>
+             </form>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-default" data-dismiss="modal" style="font:white;border:black;padding: .5em 2em">Close</button>
+           </div>
+          </div>
+         </div>
+        </div>
+      </div> -->
+
+    
+ 
+    </body>
+</html>
+

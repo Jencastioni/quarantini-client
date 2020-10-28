@@ -23,5 +23,5 @@ $(() => {
 
   //Handlebars
   $('.all-recipes').on('click', '.delete-recipe', recipeEvents.onDeleteRecipe)
-  // $('#update-modal').on('submit', '.update-recipe', recipeEvents.onUpdateRecipe)
+  $('.all-recipes').on('submit', '#update-recipe', recipeEvents.onUpdateRecipe)
 })

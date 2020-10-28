@@ -42,10 +42,10 @@ const showRecipe = (formData) => {
   })
 }
 
-const updateRecipe = (formData) => {
-  const updatedRecipeId = formData.recipe.id
+const updateRecipe = (formData, recipeId) => {
+  // const updatedRecipeId = formData.recipe.id
   return $.ajax({
-    url: config.apiUrl + '/recipe/' + updatedRecipeId,
+    url: config.apiUrl + '/recipe/' + recipeId,
     method: 'PATCH',
     headers: { 
       Authorization: 'Bearer ' + store.user.token 

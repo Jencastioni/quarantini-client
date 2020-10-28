@@ -33,7 +33,28 @@
     {{!-- <button type="submit" id="see-recipes" class="btn btn-primary index-btn" data-id="{{recipe._id}}">See Recipes</button> --}}
     {{!-- <button type="submit" id="update-recipe" class="btn btn-primary update-btn" data-id="{{recipe._id}}">Update Recipe</button> --}}
 
-    <button type="submit" class="delete-recipe" data-id="{{recipe._id}}">Delete Recipe</button>
-    {{!-- <button type="submit" class="update-recipe" data-id="{{recipe._id}}">Update Recipe</button> --}}
+    <button type="submit" class="delete-recipe" data-id="{{recipe._id}}">Delete Cocktail</button>
+    <button type="submit" class="update-button" data-id="{{recipe._id}}" data-toggle="modal" data-target="#updateModal-{{recipe._id}}">Update Cocktail</button>
+    <div id="updateModal-{{recipe._id}}" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header" style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 0;">
+            <h2 class="modal-title">Update Your Cocktail</h2>
+          </div>
+          <div class="modal-body"style="background: radial-gradient(circle, rgb(214, 214, 225) 0%, rgb(121, 121, 150) 35%, rgb(19,17,65) 100%);;margin: 0 0;">
+            <form id="update-recipe" class="form" data-id="{{recipe._id}}" style="margin:10px;padding:5px;">
+              ID:<br> <input name="recipe[id]" type="text" id="update-modal-id" style="width:90%" placeholder={{recipe._id}}><br>
+              Cocktail:<br> <input name="recipe[title]" type="text" id="update-modal-cocktail" style="width:90%" placeholder="{{recipe.title}}"><br>
+              Ingredients: <textarea name="recipe[ingredients]" type="text" id="update-textbox" style="width:90%" placeholder="{{recipe.ingredients}}"></textarea><br>
+              Directions: <textarea name="recipe[directions]" type="text" id="update-textbox-comments" style="width:90%;" placeholder="{{recipe.directions}}"></textarea><br>
+              <button id="update-button" class="form" data-toggle="modal" data-target="#updateModal">Update Cocktail</button>
+            </form>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" style="color:white;border:black">Close</button>
+            </div>
+          </div>
+       </div>
+    </div>
+
     </section>
 {{/each}}

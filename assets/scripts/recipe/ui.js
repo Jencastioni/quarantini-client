@@ -52,17 +52,20 @@ const indexRecipeFailure = function () {
 //   $('#recipe-content').append(showRecipeHtml)
 // }
 
-const onUpdateRecipeSuccess = () => {
+const onUpdateRecipeSuccess = (recipeId) => {
   // $('input').trigger('reset')
   // $('#myModalMessage').modal('show')
   $('#update-message').show()
+  $(`#updateModal-${recipeId}`).modal('hide')
   $('#update-message').text("Cocktail Updated!")
  
-  $('.all-recipes').hide()
   $('.all-recipes').empty()
+  $('.all-recipes').show()
   // $('.update-button').hide()
-  $('.update-modal').modal('hide')
+  $('#updateModal').modal('hide')
   $('form').trigger('reset')
+  $('#myModalMessage').modal('hide')
+  $('.modal-backdrop').remove()
 
 }
 

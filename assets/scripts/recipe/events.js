@@ -26,10 +26,11 @@ const onIndexRecipe = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
+  const recipeId = $(event.target).closest('section').data('id')
 
-  api.updateRecipe(formData)
-    .then(ui.onUpdateRecipeSuccess)
+  api.updateRecipe(formData, recipeId)
     .then(() => onIndexRecipe(event))
+    .then(ui.onUpdateRecipeSuccess)
     .catch(ui.onUpdateRecipeFailure)
 }
 
